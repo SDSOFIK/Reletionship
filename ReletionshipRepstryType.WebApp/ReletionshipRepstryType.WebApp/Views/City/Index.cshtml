@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ReletionshipRepstryType.WebApp.ViewModel.CityVm>
+@{
+
+}
+
+<div class=" container">
+    <table class=" table table-bordered table-responsive">
+        <thead class="text-center">
+            <tr>
+                <th>#</th>
+                <th>CityName</th>
+                <th>StateName</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.CityName</td>
+                    <td>@item.StateId</td>
+                    <td>
+                        <a asp-action="CreateOrEdit" asp-controller="City" asp-route-id="@item.Id" class="btn btn-outline-secondary">Edit </a>
+                        <a asp-action="Ditelis" asp-controller="City" asp-route-id="@item.Id" class="btn btn-outline-info">Ditelis </a>
+                        <a asp-action="Delete" asp-controller="City" asp-route-id="@item.Id" class="btn btn-outline-danger" onclick="return confirm('Are You Sure Delete id !')">Delete </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

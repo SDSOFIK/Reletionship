@@ -1,0 +1,63 @@
+﻿@model ReletionshipRepstryType.WebApp.ViewModel.EmployeeVm
+@{
+
+}
+
+<div class="container">
+    <form asp-action="CreateOrEdit" asp-controller="Employee" method="post">
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" class="form-control" placeholder="Enter Your Name..">
+            
+        </div>
+        <div class="form-group">
+            <label asp-for="Address">Address</label>
+            <input asp-for="Address" class="form-control" placeholder="Enter Your Address..">
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Gender">Gender</label>
+            
+            <input type="checkbox" class="form-check-input" >
+            <label class="form-check-label" for="exampleCheck1">Fmale</label>
+            <input type="checkbox" class="form-check-input">
+            <label class="form-check-label" for="exampleCheck1">Male</label>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="JoiningDate">JoiningDate</label>
+            <input asp-for="JoiningDate" class="form-control" placeholder="Enter Your JoiningDate..">
+
+        </div>
+        <div class="form-group row">
+            
+            <div class=" col-md-2">
+                <label for="Sec">Sec</label>
+                <input asp-for="Ssc" class="form-control" placeholder="Enter Your Ssc point..">
+            </div>
+            <div class=" col-md-2">
+                <label for="Hsc">Hsc</label>
+                <input asp-for="Hsc" class="form-control" placeholder="Enter Your Hsc point..">
+            </div>
+            <div class=" col-md-2">
+                <input asp-for="Bsc" class="form-control" placeholder="Enter Your Bsc point..">
+            </div>
+            <div class=" col-md-2">
+                <input asp-for="Bsc" class="form-control" placeholder="Enter Your Bsc point..">
+            </div>
+            <div class=" col-md-2">
+                <input asp-for="Msc" class="form-control" placeholder="Enter Your Msc point..">
+            </div>
+           
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Picture">Picture</label>
+            <input type="file" class="form-control-file" >
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+
+    </form>
+
+</div>

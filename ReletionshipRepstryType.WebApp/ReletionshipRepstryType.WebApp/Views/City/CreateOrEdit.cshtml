@@ -1,0 +1,28 @@
+﻿@model ReletionshipRepstryType.WebApp.ViewModel.CityVm
+@{
+
+}
+
+<div class="container">
+    <form asp-action="CreateOrEdit" asp-controller="City" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="CityName">CityName</label>
+                    <input asp-for="CityName" class="form-control" placeholder="Enter CityName">
+                    
+                </div>
+            </div>
+
+            <div class="col-md-6 ">
+                <div class="form-group">
+                    <label asp-for="StateId">StateName</label>
+                    <input asp-for="StateId" class="form-control" placeholder="Enter StateName">
+
+                </div>
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-outline-primary mt-3">Submit</button>
+    </form>
+</div>
